@@ -6,4 +6,13 @@ export default function () {
   //     this.use('toLeft'),
   //     this.reverse('toRight')
   //   );
+
+  this.transition(
+    this.hasClass('image-container'),
+    this.toValue(function(toValue, fromValue) {
+      return toValue && fromValue && toValue.index > fromValue.index;
+    }),
+    this.use('toLeft', { duration: 600 }),
+    this.reverse('toRight', { duration: 600 }),
+  );
 }

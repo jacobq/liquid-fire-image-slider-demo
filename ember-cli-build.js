@@ -4,7 +4,36 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    'ember-cli-image-transformer': {
+      images: [
+        {
+          inputFilename: 'public/images/quino-al-JFeOy62yjXk-unsplash.jpg',
+          outputFileName: 'sunset',
+          convertTo: 'webp',
+          sizes: [400, 1080],
+        },
+        {
+          inputFilename:
+            'public/images/nathan-lindahl-1j18807_ul0-unsplash.jpg',
+          outputFileName: 'fire',
+          convertTo: 'webp',
+          sizes: [400, 1080],
+        },
+        {
+          inputFilename:
+            'public/images/pawel-czerwinski-NTYYL9Eb9y8-unsplash.jpg',
+          outputFileName: 'liquid',
+          convertTo: 'webp',
+          sizes: [400, 1080],
+        },
+        {
+          inputFilename: 'public/images/holden-baxter-oxQ0egaQMfU-unsplash.jpg',
+          outputFileName: 'road',
+          convertTo: 'webp',
+          sizes: [400, 1080],
+        },
+      ],
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated

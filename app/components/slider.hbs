@@ -1,2 +1,12 @@
-
+<h3>slider component</h3>
+{{#liquid-bind this.selectedImage class="image-container" as |s|}}
+  <img
+    class="slider-crop"
+    src={{s.src}}
+    alt={{s.alt}}
+  >
+{{/liquid-bind}}
+<br>
+<button {{on "click" this.prev}} disabled={{this.isFirst}}>&lt; Prev</button>
+<button {{on "click" this.next}} disabled={{this.isLast}}>Next &gt;</button>
 {{yield}}
